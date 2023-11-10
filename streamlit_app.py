@@ -116,7 +116,7 @@ fornecedor_counts = filtered_df['Fornecedor'].value_counts().reset_index().renam
 # Bar chart for 'responsavel'
 st.subheader("Quantidade por Responsável")
 responsavel_chart = alt.Chart(responsavel_counts).mark_bar().encode(
-    x=alt.X('Responsavel:N', sort=alt.EncodingSortField(field='count', op='sum', order='descending')),
+    x=alt.X('Responsavel:N', sort=alt.EncodingSortField(field='count1', op='sum', order='descending')),
     y='count1:Q'
 )
 st.altair_chart(responsavel_chart, use_container_width=True)
@@ -124,7 +124,7 @@ st.altair_chart(responsavel_chart, use_container_width=True)
 # Bar chart for 'fornecedor'
 st.subheader("Quantidade Fornecedor")
 fornecedor_chart = alt.Chart(fornecedor_counts).mark_bar().encode(
-    x=alt.X('Fornecedor:N', sort=alt.EncodingSortField(field='count', op='sum', order='descending')),
+    x=alt.X('Fornecedor:N', sort=alt.EncodingSortField(field='count2', op='sum', order='descending')),
     y='count2:Q'
 )
 st.altair_chart(fornecedor_chart, use_container_width=True)
