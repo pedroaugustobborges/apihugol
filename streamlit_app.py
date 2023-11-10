@@ -129,3 +129,4 @@ fornecedor_chart = alt.Chart(fornecedor_counts).mark_bar().encode(
 )
 st.altair_chart(fornecedor_chart, use_container_width=True)
 
+
